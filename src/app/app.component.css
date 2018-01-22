@@ -1,0 +1,28 @@
+body {
+    background-color: darkgray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul {
+    list-style-type: none;
+    padding: 2px;
+    margin: 0%;
+}
+
+.mainMenu {
+    background-color: blue;
+}
+
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+.logo {
+    float: left;
+    bottom: 15px;
+}
