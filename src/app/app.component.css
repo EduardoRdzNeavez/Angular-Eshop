@@ -11,6 +11,13 @@ ul {
 .mainMenu {
     background-color: blue;
 }
+.comp {
+    position: absolute;
+    top: 30%;
+    height: 500px;
+    width: 500px;
+
+}
 
 li {
     float: left;
@@ -21,8 +28,4 @@ li a {
     text-align: center;
     padding: 16px;
     text-decoration: none;
-}
-.logo {
-    float: left;
-    bottom: 15px;
 }
