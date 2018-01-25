@@ -3,6 +3,8 @@ import { HttpModule } from '@angular/http';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
+import { Response } from '@angular/http/src/static_response';
+import { ResponseType } from '@angular/http/src/enums';
 
 @Injectable()
 export class PokemomServiceService {
@@ -10,7 +12,6 @@ export class PokemomServiceService {
   constructor( private _http: Http) { }
 
   private _pokeApi = 'http://pokeapi.salestock.net/api/v2/pokemon/';
-
 
   getPokemon() {
     return this._http.get(this._pokeApi).map(res => res.json());

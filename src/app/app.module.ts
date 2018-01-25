@@ -4,10 +4,12 @@ import { PokemomServiceService } from './pokemom-service.service';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PokemonListComponent
   ],
   imports: [
     BrowserModule, HttpModule, FormsModule

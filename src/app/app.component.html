@@ -5,10 +5,11 @@
     <button>Get firsts 20 pokemons</button>
 </div>
 <div>
-    <button (click)="buscar()">Search</button>
+    <button (click)="buscar($event)">Search</button>
     <input type="number" [(ngModel)]="pokeId" placeholder="pokemon number">
     <!--<img src="{{pokemon.imagen}}" alt="{{pokemon.nombre}}">-->
 </div>
+
 
 
 
