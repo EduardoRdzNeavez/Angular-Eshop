@@ -26,4 +26,5 @@ getPokemonForm(pokemonId) {
   return this._http.get(this._pokeApi + 'pokemon-form/' + pokemonId)
     .map(res => res.json());
 }
+
 }

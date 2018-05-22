@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import {PokemomServiceService } from '../pokemom-service.service';
+import { from } from 'rxjs/observable/from';
+
 
 @Component({
   selector: 'app-pokemon-list',
@@ -7,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonListComponent implements OnInit {
 
-  constructor() { }
+  constructor( private httpmodule: HttpModule ) { }
 
   ngOnInit() {
   }

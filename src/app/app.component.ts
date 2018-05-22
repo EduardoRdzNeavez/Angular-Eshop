@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable } from 'rxjs/rx';
+import { Observable } from 'rxjs/rx';
 import { PokemomServiceService } from './pokemom-service.service';
 import { NgModel } from '@angular/forms';
 import { map } from 'rxjs/operator/map';
@@ -42,7 +42,7 @@ export class AppComponent implements OnInit {
      .subscribe(results => {
        console.log(results[0]);
        console.log(results[1]);
-       this.pokemon.nombre = results[0].name;
+       this.pokemon.name = results[0].name;
        this.pokemon.imagen = results[1].sprites.front_default;
      });
 

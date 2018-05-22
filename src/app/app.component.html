@@ -1,14 +1,20 @@
-<h1>Welcome to:</h1>
-<img width="200" height="60" alt="Pokemón Logo" src="https://vignette.wikia.nocookie.net/es.pokemon/images/6/61/Logo_de_Pok%C3%A9mon_%28EN%29.png/revision/latest?cb=20160319183155">
-<div>
-    <button>Search pokemons</button>
-    <button>Get firsts 20 pokemons</button>
-</div>
-<div>
-    <button (click)="buscar($event)">Search</button>
-    <input type="number" [(ngModel)]="pokeId" placeholder="pokemon number">
-    <!--<img src="{{pokemon.imagen}}" alt="{{pokemon.nombre}}">-->
-</div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                POKÉDEX
+            </a>
+            <img src="https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/07/Pokemon-Go-Pok%C3%A9dex-300x229.png" style="width:50px; height:50px">
+        <ul class="main-list navbar-text navbar-right nav navbar-nav list-inline">
+            <li><a [routerLink]="['/pokemonList']">Pokemon list</a></li>
+            <li><a [routerLink]="['/search']">Search Component</a></li>
+            <li><a [routerLink]="['/']">About</a></li>
+        </ul>   
+    </div>
+</nav>    
+<div class="childComp col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+  <router-outlet></router-outlet>
+</div>  
+
 
 
 

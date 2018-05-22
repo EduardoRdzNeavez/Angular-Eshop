@@ -24,8 +24,18 @@ li {
 }
 li a {
     display: block;
-    color: black;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 16px;
     text-decoration: none;
 }
+
+.navdos {
+    position: absolute;
+    top: 10em;
+}
+
+ 
+
+
+
