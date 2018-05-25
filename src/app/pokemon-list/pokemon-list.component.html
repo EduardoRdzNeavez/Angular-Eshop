@@ -1,2 +1,9 @@
 <h1>Poke List</h1>
 <p>On this page you can see a list with the first 20 pokemon's</p>  
+
+<div *ngIf="allpokemon">
+    <div *ngFor="let pokemon of allpokemon">
+        {{this.allpokemon.name}}
+        {{this.allpokemon.name}}
+    </div>
+</div>

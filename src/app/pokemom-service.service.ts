@@ -6,7 +6,8 @@ import 'rxjs/add/operator/map';
 import { Response } from '@angular/http/src/static_response';
 import { ResponseType } from '@angular/http/src/enums';
 import { Observable } from 'rxjs/Observable';
-import { Pokemonint } from './pokemon';
+import { Pokemon } from './pokemon';
+
 
 @Injectable()
 export class PokemomServiceService {
@@ -15,7 +16,7 @@ export class PokemomServiceService {
 
   private _pokeApi = 'http://pokeapi.salestock.net/api/v2/pokemon/';
 
-getPokemon(): Observable <Pokemonint[]> {
+getPokemon(): Observable <Pokemon[]> {
   console.log('getting pokemons :)');
     return this._http.get(this._pokeApi)
     .map(res => res.json());

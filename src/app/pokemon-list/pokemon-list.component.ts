@@ -3,7 +3,8 @@ import { HttpModule } from '@angular/http';
 import {PokemomServiceService } from '../pokemom-service.service';
 import { from } from 'rxjs/observable/from';
 import { Observable } from 'rxjs/Observable';
-import { Pokemonint } from '../pokemon';
+import { Pokemon } from '../pokemon';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -13,7 +14,7 @@ import { Pokemonint } from '../pokemon';
 })
 export class PokemonListComponent implements OnInit {
 
-  allpokemon: any;
+  allpokemon: {};
 
   constructor( private httpmodule: HttpModule,
                private Pokemomservice: PokemomServiceService ) {}
@@ -21,7 +22,7 @@ export class PokemonListComponent implements OnInit {
   ngOnInit() {
     this.Pokemomservice.getPokemon()
     .subscribe(
-      (data: Pokemonint[]) => this.allpokemon = data,
+      (data: Pokemon[]) => this.allpokemon = data,
       (err: any) => console.log(err),
       () => console.log('y solo me tarde 3 dias', this.allpokemon),
     );
