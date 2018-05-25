@@ -8,6 +8,7 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { RouterModule } from '@angular/router';
 import { SearchComponent } from './search/search.component';
 import { patch } from 'webdriver-js-extender';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { patch } from 'webdriver-js-extender';
     SearchComponent,
   ],
   imports: [
+    BsDropdownModule.forRoot(),
     BrowserModule,
      HttpModule,
       FormsModule,

@@ -4,16 +4,26 @@
                 POKÉDEX
             </a>
             <img src="https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/07/Pokemon-Go-Pok%C3%A9dex-300x229.png" style="width:50px; height:50px">
-        <ul class="main-list navbar-text navbar-right nav navbar-nav list-inline">
-            <li><a [routerLink]="['/pokemonList']">Pokemon list</a></li>
-            <li><a [routerLink]="['/search']">Search Component</a></li>
-            <li><a [routerLink]="['/']">About</a></li>
-        </ul>   
+            <div class="btn-group" dropdown>
+                <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+                  Button dropdown <span class="caret"></span>
+                </button>
+                <ul *dropdownMenu class="dropdown-menu main-list navbar-text navbar-right nav navbar-nav list-inline" role="menu">
+                  <li role="menuitem"><a class="dropdown-item" [routerLink]="['/pokemonList']">Pokemon list</a></li>
+                  <li role="menuitem"><a class="dropdown-item" [routerLink]="['/search']">Search Component</a></li>
+                  <li role="menuitem"><a class="dropdown-item" [routerLink]="['/']">Something else here</a></li>
+                  <li class="divider dropdown-divider"></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+                  </li>
+                </ul>
+              </div>
     </div>
 </nav>    
 <div class="childComp col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
   <router-outlet></router-outlet>
 </div>  
+
+
 
 
 
